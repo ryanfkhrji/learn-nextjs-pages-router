@@ -22,5 +22,7 @@ export async function getStaticProps() {
     props: {
       products: response.data,
     },
+    // ngeregenerate the page every 10 seconds
+    revalidate: 10,
   };
 }

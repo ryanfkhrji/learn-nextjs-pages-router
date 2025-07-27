@@ -13,7 +13,8 @@ const ProductView = ({ products }: { products: ProductType[] }) => {
             {products.map((product: ProductType) => (
               <Link href={`/product/${product.id}`} key={product.id} className={styles.product__content__item}>
                 <div className={styles.product__content__item__image}>
-                  <img src={product.image} alt={product.name} />
+                  {/* <img src={product.image} alt={product.name} /> */}
+                  <Image src={product.image} alt={product.name} width={400} height={400} />
                 </div>
                 <h4 className={styles.product__content__item__name}>{product.name}</h4>
                 <p className={styles.product__content__item__category}>{product.category}</p>
